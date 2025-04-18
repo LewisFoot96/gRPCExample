@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\gRPCExample.AppHost\gRPCExample.AppHost.csproj" />
+    <ProjectReference Include="..\gRPCExampleService\gRPCExampleService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

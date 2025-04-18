@@ -1,3 +1,5 @@
+using Grpc.Net.Client;
+
 namespace gRPCExampleService.Tests.Tests
 {
     public class IntegrationTest1
@@ -15,7 +17,7 @@ namespace gRPCExampleService.Tests.Tests
         public async Task GetWebResourceRootReturnsOkStatusCode()
         {
             // Arrange
-            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.MyAspireApp_AppHost>();
+            var appHost = await DistributedApplicationTestingBuilder.CreateAsync<Projects.gRPCExample_AppHost>();
             appHost.Services.ConfigureHttpClientDefaults(clientBuilder =>
             {
                 clientBuilder.AddStandardResilienceHandler();
@@ -26,10 +28,13 @@ namespace gRPCExampleService.Tests.Tests
             var resourceNotificationService = app.Services.GetRequiredService<ResourceNotificationService>();
             await app.StartAsync();
 
-            // Act
-            var httpClient = app.CreateHttpClient("webfrontend");
-            await resourceNotificationService.WaitForResourceAsync("webfrontend", KnownResourceStates.Running).WaitAsync(TimeSpan.FromSeconds(30));
-            var response = await httpClient.GetAsync("/");
+            var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var client = new Greeter.GreeterClient(channel);
+
+            var response = await client.SayHelloAsync(
+                new HelloRequest { Name = "World" });
+
+            Console.WriteLine(response.Message);// Act
 
             // Assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\gRPCClientExample\gRPCClientExample.csproj" />
     <ProjectReference Include="..\gRPCExampleService\gRPCExampleService.csproj" />
   </ItemGroup>
 

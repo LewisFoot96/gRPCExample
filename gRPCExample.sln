@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCExample.AppHost", "gRPC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCExample.ServiceDefaults", "gRPCExample.ServiceDefaults\gRPCExample.ServiceDefaults.csproj", "{7EB3A8C0-5ACE-4C4C-94F6-45364D20813D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCExampleService.Tests", "gRPCExampleService.Tests\gRPCExampleService.Tests.csproj", "{A52D59CD-847D-4657-92A8-03F411C7ABA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCClientExample", "gRPCClientExample\gRPCClientExample.csproj", "{8075B712-8CEA-41C9-B914-4D5DD316FD9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{7EB3A8C0-5ACE-4C4C-94F6-45364D20813D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EB3A8C0-5ACE-4C4C-94F6-45364D20813D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EB3A8C0-5ACE-4C4C-94F6-45364D20813D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A52D59CD-847D-4657-92A8-03F411C7ABA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A52D59CD-847D-4657-92A8-03F411C7ABA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A52D59CD-847D-4657-92A8-03F411C7ABA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A52D59CD-847D-4657-92A8-03F411C7ABA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8075B712-8CEA-41C9-B914-4D5DD316FD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8075B712-8CEA-41C9-B914-4D5DD316FD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8075B712-8CEA-41C9-B914-4D5DD316FD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8075B712-8CEA-41C9-B914-4D5DD316FD9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
